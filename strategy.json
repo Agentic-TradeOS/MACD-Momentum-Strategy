@@ -1,0 +1,28 @@
+{
+  "name": "MACD Momentum Strategy",
+  "version": "1.0.0",
+  "description": "Captures momentum continuation moves by entering on confirmed MACD bullish crossovers and exiting on bearish crossovers.",
+  "author": "Agentic Trading",
+  "license": "MIT",
+  "parameters": {
+    "fastPeriod": 12,
+    "slowPeriod": 26,
+    "signalPeriod": 9,
+    "stopLossPct": 0.06,
+    "takeProfitPct": 0.20,
+    "positionSizePct": 0.20,
+    "minHistogram": 0.0
+  },
+  "signals": {
+    "entry": {
+      "condition": "MACD line crosses above signal line AND histogram > minHistogram",
+      "action": "BUY"
+    },
+    "exit": {
+      "condition": "MACD line crosses below signal line OR stop loss hit",
+      "action": "SELL"
+    }
+  },
+  "timeframes": ["1D", "4H"],
+  "assetClasses": ["stocks", "crypto", "futures"]
+}
