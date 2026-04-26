@@ -15,7 +15,7 @@
   },
   "signals": {
     "entry": {
-      "condition": "MACD line crosses above signal line AND histogram > 0",
+      "condition": "MACD line crosses above signal line AND histogram > minHistogram",
       "action": "BUY"
     },
     "exit": {

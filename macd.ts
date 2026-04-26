@@ -10,7 +10,7 @@ export const defaultConfig: MACDConfig = {
   fastPeriod: 12,
   slowPeriod: 26,
   signalPeriod: 9,
-  stopLossPct: 0.08,
+  stopLossPct: 0.06,
   takeProfitPct: 0.20,
 };
 

@@ -46,11 +46,13 @@ class MACDMomentumStrategy:
     signal_period : int
         Signal line EMA period (default: 9)
     stop_loss_pct : float
-        Stop loss percentage (default: 0.08)
+        Stop loss percentage (default: 0.06)
     take_profit_pct : float
         Take profit percentage (default: 0.20)
     position_size_pct : float
         Position size as percentage of equity (default: 0.20)
+    min_histogram : float
+        Minimum histogram value required for a bullish entry signal (default: 0.0)
 
     Example:
     --------
@@ -64,7 +66,7 @@ class MACDMomentumStrategy:
         fast_period: int = 12,
         slow_period: int = 26,
         signal_period: int = 9,
-        stop_loss_pct: float = 0.08,
+        stop_loss_pct: float = 0.06,
         take_profit_pct: float = 0.20,
         position_size_pct: float = 0.20,
         min_histogram: float = 0.0,
